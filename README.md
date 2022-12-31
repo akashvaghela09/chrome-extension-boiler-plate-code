@@ -1,4 +1,4 @@
-# React Chrome Extension Boilerplate Code
+# React Chrome Extension Template
 
 This is a boilerplate project for creating a Chrome extension using the latest technologies such as [manifest version 3](https://developer.chrome.com/docs/extensions/mv3/intro/), [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/), and [Webpack](https://webpack.js.org/). It includes all the necessary code and scripts for building and packaging the extension, as well as **hot reloading** during development.
 

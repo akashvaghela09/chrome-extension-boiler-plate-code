@@ -1,5 +1,5 @@
 {
-  "name": "react-chrome-extension-boilerplate-code",
+  "name": "react-chrome-extension-template",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -38,6 +38,7 @@
     "babel-loader": "^9.1.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
+    "eslint": "^8.31.0",
     "mini-css-extract-plugin": "^2.7.2",
     "postcss": "^8.4.20",
     "postcss-loader": "^7.0.2",

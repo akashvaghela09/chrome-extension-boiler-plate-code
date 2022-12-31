@@ -8,7 +8,8 @@
     "default_title": "My Chrome Extension",
     "default_popup": "popup.html"
   },
-  "permissions": [
-    "activeTab"
-  ]
+  "chrome_url_overrides": {
+    "override_page": "build/index.html"
+  },
+  "permissions": ["activeTab"]
 }

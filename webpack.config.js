@@ -4,7 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        'app': './src/index.js',
+        'background': './src/Scripts/background.js',
+        'content-script': './src/Scripts/content.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dev'), // path for the build
         filename: '[name].js',
