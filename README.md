@@ -17,6 +17,12 @@ cd react-chrome-extension-boilerplate-code
 ```
 npm install
 ```
+4. Start the development server:
+```
+npm run dev
+```
+Happy Hacking :)
+
 
 ## Scripts
 The following scripts are available:
@@ -52,9 +58,9 @@ npm run pack
 ## Loading the Extension
 To load the extension in Chrome, follow these steps:
 
-1. Open Chrome and go to the extensions page (chrome://extensions).
+1. Open Chrome and go to the [extensions page](chrome://extensions).
 2. Enable developer mode by clicking the toggle in the top right corner.
-3. Click the "Load unpacked" button and select the build folder.
+3. Click the "Load unpacked" button and select the **dev** folder.
 
 The extension should now be loaded in Chrome. You can verify this by looking for the extension's icon in the browser toolbar.
 
