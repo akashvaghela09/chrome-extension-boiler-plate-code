@@ -21,14 +21,18 @@ module.exports = {
                     options: {
                         presets: [
                             '@babel/preset-env',
-                            ['@babel/preset-react', {"runtime": "automatic"}]
+                            ['@babel/preset-react', { "runtime": "automatic" }]
                         ],
                     }
                 }
             },
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader"]
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader"
+                ]
             },
             {
                 test: /\.svg$/i,
