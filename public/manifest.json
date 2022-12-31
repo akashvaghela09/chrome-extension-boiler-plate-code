@@ -11,5 +11,12 @@
   "chrome_url_overrides": {
     "override_page": "build/index.html"
   },
-  "permissions": ["activeTab"]
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["https://www.youtube.com/", "http://www.youtube.com/"],
+    "js": ["content.js"]
+  }]
 }

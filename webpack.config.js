@@ -6,8 +6,6 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
     entry: {
         'app': './src/index.js',
-        'background': './src/Scripts/background.js',
-        'content-script': './src/Scripts/content.js'
     },
     output: {
         path: path.resolve(__dirname, 'dev'), // path for the build
@@ -61,6 +59,22 @@ module.exports = {
             patterns: [
                 {
                     from: "public",
+                },
+            ],
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: "./src/scripts/background.js",
+                    to: path.resolve(__dirname, 'dev'),
+                },
+            ],
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: "./src/scripts/content.js",
+                    to: path.resolve(__dirname, 'dev'),
                 },
             ],
         }),
