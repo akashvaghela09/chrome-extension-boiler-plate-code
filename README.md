@@ -7,7 +7,7 @@ To get started, follow these steps:
 
 1. Clone the repository:
 ```
-git clone https://github.com/your-username/chrome-extension-boilerplate-code.git
+git clone https://github.com/akashvaghela09/chrome-extension-boilerplate-code.git
 ```
 2. Navigate to the project directory:
 ```
