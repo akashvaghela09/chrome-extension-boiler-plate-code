@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "short_name": "React App",
+  "name": "Youtube Tester",
+  "description": "A description of my extension",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "My Chrome Extension",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
