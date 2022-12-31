@@ -1,22 +1,36 @@
 {
   "manifest_version": 3,
+  "version": "0.0.1",
   "short_name": "React App",
-  "name": "Youtube Tester",
-  "description": "A description of my extension",
-  "version": "1.0.0",
+  "name": "Create React App Sample",
+  "description": "Sample application showing how to create an extension with Create React App",
   "action": {
-    "default_title": "My Chrome Extension",
+    "default_title": "CRE",
     "default_popup": "popup.html"
   },
-  "chrome_url_overrides": {
-    "override_page": "build/index.html"
-  },
-  "permissions": ["activeTab"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.bundle.js"
   },
-  "content_scripts": [{
-    "matches": ["<all_urls>"],
-    "js": ["content.js"]
-  }]
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "contentScript.bundle.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://music.yandex.ru/;"
+  }
 }

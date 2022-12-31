@@ -1,17 +1,17 @@
 {
-  "name": "react-chrome-extension-template",
+  "name": "my-browser-extension",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^1.2.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-browser-extension-scripts": "4.0.10",
+    "react-dom": "^18.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "dev": "webpack --watch --config webpack.config.js --mode development",
-    "zip": "zip -r extension.zip manifest.json backgroundScript contentScript build",
+    "zip": "zip -r extension.zip manifest.json ./background/index.js ./contentScript/index.js build",
     "pack": "npm run build && npm run zip"
   },
   "eslintConfig": {
@@ -33,18 +33,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.20.7",
-    "@babel/preset-env": "^7.20.2",
-    "babel-loader": "^9.1.0",
-    "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.7.3",
-    "eslint": "^8.31.0",
-    "mini-css-extract-plugin": "^2.7.2",
-    "postcss": "^8.4.20",
-    "postcss-loader": "^7.0.2",
-    "svg-url-loader": "^8.0.0",
-    "tailwindcss": "^3.2.4",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "tailwindcss": "^3.2.4"
   }
 }

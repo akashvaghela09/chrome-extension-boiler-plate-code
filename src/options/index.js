@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Options from './Options';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Options />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('options')
 );
