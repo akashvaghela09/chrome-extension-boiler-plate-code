@@ -2,7 +2,12 @@
   "manifest_version": 2,
   "version": "0.0.1",
   "name": "React App",
+  "short_name": "React App",
   "description": "Sample application showing how to create an extension with Create React App",
+  "browser_action": {
+    "default_title": "CRE"
+  },
+  "options_page": "options.html",
   "icons": {
     "16": "img/icon-16.png",
     "48": "img/icon-48.png",
@@ -10,30 +15,17 @@
   },
   "background": {
     "scripts": ["background.bundle.js"],
-    "persistent": false
+    "persistent": true
   },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "contentScript.bundle.js"
-      ]
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.bundle.js"],
+      "run_at": "document_idle"
     }
   ],
-  "browser_action": {
-    "default_icon": {
-      "16": "img/icon-16.png",
-      "48": "img/icon-48.png",
-      "128": "img/icon-128.png"
-    },
-    "default_title": "CRE",
-    "default_popup": "popup.html"
-  },
-  "options_page": "options.html",
-  "permissions": [
-    "activeTab"
-  ],
+  "web_accessible_resources": ["popup.html", "img/*.png", "img/*.svg"],
+  
+  "permissions": ["activeTab"],
   "content_security_policy": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://music.yandex.ru/;"
 }
