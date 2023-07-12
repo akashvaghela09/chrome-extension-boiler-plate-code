@@ -6,11 +6,12 @@
     "axios": "^1.2.2",
     "react": "^18.2.0",
     "react-browser-extension-scripts": "4.0.10",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rimraf build && react-scripts build",
     "zip": "zip -r extension.zip manifest.json ./background/index.js ./contentScript/index.js build",
     "pack": "npm run build && npm run zip"
   },
