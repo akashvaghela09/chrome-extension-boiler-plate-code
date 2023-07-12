@@ -2,6 +2,19 @@
 
 This is a boilerplate project for creating a Chrome extension using the latest technologies such as [manifest version 3](https://developer.chrome.com/docs/extensions/mv3/intro/), [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/), and [Webpack](https://webpack.js.org/). It includes all the necessary code and scripts for building and packaging the extension, as well as **hot reloading** during development.
 
+Table of Contents
+=================
+- [React Chrome Extension Template](#react-chrome-extension-template)
+- [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+  - [Loading the Extension](#loading-the-extension)
+  - [Scripts](#scripts)
+    - [`npm start`](#npm-start)
+    - [`npm run build`](#npm-run-build)
+    - [`npm run zip`](#npm-run-zip)
+    - [`npm run pack`](#npm-run-pack)
+  - [Feedback and Support](#feedback-and-support)
+
 ## Getting Started
 
 To get started, follow these steps:
@@ -48,6 +61,17 @@ npm start
 
 Happy Hacking :)
 
+
+## Loading the Extension
+
+To load the extension in Chrome, follow these steps:
+
+1. Open Chrome and go to the extensions page `chrome://extensions`.
+2. Enable developer mode by clicking the toggle in the top right corner.
+3. Click the "Load unpacked" button and select the `dev` folder.
+
+The extension should now be loaded in Chrome. You can verify this by looking for the extension's icon in the browser toolbar.
+
 ## Scripts
 
 The following scripts are available:
@@ -83,16 +107,6 @@ This script combines the build and zip scripts into one command. It first builds
 ```
 npm run pack
 ```
-
-## Loading the Extension
-
-To load the extension in Chrome, follow these steps:
-
-1. Open Chrome and go to the extensions page `chrome://extensions`.
-2. Enable developer mode by clicking the toggle in the top right corner.
-3. Click the "Load unpacked" button and select the `dev` folder.
-
-The extension should now be loaded in Chrome. You can verify this by looking for the extension's icon in the browser toolbar.
 
 ## Feedback and Support
 
