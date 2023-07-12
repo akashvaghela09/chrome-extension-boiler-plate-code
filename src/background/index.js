@@ -1,4 +1,10 @@
 // If your extension doesn't need a background script, just leave this file empty
+
 /*global chrome*/
 
-console.log("Background script running....")
+// Watch for extension icon click
+chrome.action.onClicked.addListener(function (tab) {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, { command: "toggle" });
+    });
+});
